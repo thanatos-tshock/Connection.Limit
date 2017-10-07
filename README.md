@@ -1,5 +1,3 @@
-# Connection.Limit
-
 # Connection.Limit plugin for TShock
 A basic connection limiter for denying multiple connections from the same ip
 
