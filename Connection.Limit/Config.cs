@@ -12,7 +12,7 @@ namespace Connection.Limit
 		public int MaxConnectionsPerIp { get; set; } = 1;
 
 		[JsonProperty("recalibration-time-milliseconds")]
-		public int RecalibrationTimeMilliseconds { get; set; } = 1000;
+		public int RecalibrationTimeMilliseconds { get; set; } = 5000;
 
 		public void Verify()
 		{

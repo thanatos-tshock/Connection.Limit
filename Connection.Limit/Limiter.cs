@@ -112,6 +112,12 @@ namespace Connection.Limit
 							int number;
 							if (_registry.TryGetValue(ip, out number))
 							{
+								if (_registry[ip] + 1 > _config.MaxConnectionsPerIp)
+								{
+									client.PendingTermination = true;
+									Console.WriteLine($"{ConnectionLimitPlugin.ConsoleTag} Disconnected client {ip} at slot {client.Id} for exceeding the connection limit of {_config.MaxConnectionsPerIp}");
+								}
+
 								_registry[ip]++;
 							}
 							else
