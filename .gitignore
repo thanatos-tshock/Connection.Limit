@@ -1,0 +1,7 @@
+/Connection.Limit/bin
+/Connection.Limit/obj
+*.suo
+/*.user
+packages/
+References/
+.vs/
